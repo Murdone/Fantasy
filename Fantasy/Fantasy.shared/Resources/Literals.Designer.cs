@@ -142,6 +142,51 @@ namespace Fantasy.shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Record not found.
+        /// </summary>
+        public static string ERR001 {
+            get {
+                return ResourceManager.GetString("ERR001", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot be deleted because it has related records..
+        /// </summary>
+        public static string ERR002 {
+            get {
+                return ResourceManager.GetString("ERR002", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The record you are trying to create already exists..
+        /// </summary>
+        public static string ERR003 {
+            get {
+                return ResourceManager.GetString("ERR003", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The country Id is not valid..
+        /// </summary>
+        public static string ERR004 {
+            get {
+                return ResourceManager.GetString("ERR004", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The team Id is not valid..
+        /// </summary>
+        public static string ERR005 {
+            get {
+                return ResourceManager.GetString("ERR005", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
         public static string Error {
@@ -178,6 +223,15 @@ namespace Fantasy.shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to the field {0} cannot be longer than {1} characters.
+        /// </summary>
+        public static string MaxLength {
+            get {
+                return ResourceManager.GetString("MaxLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New.
         /// </summary>
         public static string New {
@@ -205,6 +259,15 @@ namespace Fantasy.shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Field {0} is required..
+        /// </summary>
+        public static string RequiredField {
+            get {
+                return ResourceManager.GetString("RequiredField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Return.
         /// </summary>
         public static string Returnn {
@@ -223,11 +286,38 @@ namespace Fantasy.shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Search….
+        /// </summary>
+        public static string Search {
+            get {
+                return ResourceManager.GetString("Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select a File… .
+        /// </summary>
+        public static string SelectFile {
+            get {
+                return ResourceManager.GetString("SelectFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Soccer predictions app.
         /// </summary>
         public static string Subtitle {
             get {
                 return ResourceManager.GetString("Subtitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Team.
+        /// </summary>
+        public static string Team {
+            get {
+                return ResourceManager.GetString("Team", resourceCulture);
             }
         }
         
