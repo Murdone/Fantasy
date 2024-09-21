@@ -295,6 +295,15 @@ namespace Fantasy.shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to -- Select a Country ---.
+        /// </summary>
+        public static string SelectACountry {
+            get {
+                return ResourceManager.GetString("SelectACountry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select a File… .
         /// </summary>
         public static string SelectFile {
@@ -318,6 +327,15 @@ namespace Fantasy.shared.Resources {
         public static string Team {
             get {
                 return ResourceManager.GetString("Team", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Teams.
+        /// </summary>
+        public static string Teams {
+            get {
+                return ResourceManager.GetString("Teams", resourceCulture);
             }
         }
         

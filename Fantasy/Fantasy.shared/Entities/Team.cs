@@ -15,5 +15,7 @@ namespace Fantasy.shared.Entities
         public string? Image { get; set; }
         public Country? Country { get; set; }
         public int CountryId { get; set; }
+
+        public string ImageFull => string.IsNullOrEmpty(Image) ? "/images/NoImage.png" : Image;
     }
 }
