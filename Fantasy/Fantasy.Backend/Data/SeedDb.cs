@@ -42,7 +42,7 @@ public class SeedDb
                 if (File.Exists(filePath))
                 {
                     var fileBytes = File.ReadAllBytes(filePath);
-                    imagePath = await _fileStorage.SaveFileAsync(fileBytes, "jpg", "flags");
+                    imagePath = await _fileStorage.SaveFileAsync(fileBytes, "jpg", "teams");
                 }
                 _context.Teams.Add(new Team { Name = country.Name, Country = country!, Image = imagePath });
             }

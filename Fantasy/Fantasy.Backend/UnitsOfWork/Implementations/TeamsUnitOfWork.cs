@@ -1,6 +1,7 @@
 ﻿using Fantasy.Backend.Repositories.Interfaces;
 using Fantasy.Backend.UnitsOfWork.interfaces;
 using Fantasy.Frontend.DTOs;
+using Fantasy.shared.DTOs;
 using Fantasy.shared.Entities;
 using Fantasy.shared.Responses;
 
@@ -24,4 +25,8 @@ public class TeamsUnitOfWork : GenericUnitOfWork<Team>, ITeamsUnitOfWork
     public override async Task<ActionsResponse<Team>> GetAsync(int id) => await _teamsRepository.GetAsync(id);
 
     public override async Task<ActionsResponse<IEnumerable<Team>>> GetAsync() => await _teamsRepository.GetAsync();
+
+    public override async Task<ActionsResponse<IEnumerable<Team>>> GetAsync(PaginationDTO pagination) => await _teamsRepository.GetAsync(pagination);
+
+    public async Task<ActionsResponse<int>> GetTotalRecordsAsync(PaginationDTO pagination) => await _teamsRepository.GetTotalRecordsAsync(pagination);
 }

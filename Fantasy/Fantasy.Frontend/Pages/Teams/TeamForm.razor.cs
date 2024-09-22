@@ -1,5 +1,4 @@
 using CurrieTechnologies.Razor.SweetAlert2;
-using Fantasy.Frontend.DTOs;
 using Fantasy.Frontend.Repositories;
 using Fantasy.shared.Entities;
 using Fantasy.shared.Resources;
@@ -7,6 +6,7 @@ using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
+using Fantasy.Frontend.DTOs;
 
 namespace Fantasy.Frontend.Pages.Teams;
 

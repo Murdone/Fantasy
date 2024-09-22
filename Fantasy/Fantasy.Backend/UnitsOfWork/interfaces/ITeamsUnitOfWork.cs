@@ -1,4 +1,5 @@
 ﻿using Fantasy.Frontend.DTOs;
+using Fantasy.shared.DTOs;
 using Fantasy.shared.Entities;
 using Fantasy.shared.Responses;
 
@@ -15,4 +16,8 @@ public interface ITeamsUnitOfWork
     Task<ActionsResponse<Team>> GetAsync(int id);
 
     Task<ActionsResponse<IEnumerable<Team>>> GetAsync();
+
+    Task<ActionsResponse<IEnumerable<Team>>> GetAsync(PaginationDTO pagination);
+
+    Task<ActionsResponse<int>> GetTotalRecordsAsync(PaginationDTO pagination);
 }

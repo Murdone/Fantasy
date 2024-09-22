@@ -1,5 +1,6 @@
 ﻿using Fantasy.Backend.Repositories.Interfaces;
 using Fantasy.Backend.UnitsOfWork.interfaces;
+using Fantasy.shared.DTOs;
 using Fantasy.shared.Responses;
 
 namespace Fantasy.Backend.UnitsOfWork.Implementations;
@@ -20,6 +21,10 @@ public class GenericUnitOfWork<T> : IGenericUnitOfWork<T> where T : class
     public virtual async Task<ActionsResponse<IEnumerable<T>>> GetAsync() => await _repository.GetAsync();
 
     public virtual async Task<ActionsResponse<T>> GetAsync(int id) => await _repository.GetAsync(id);
+
+    public virtual async Task<ActionsResponse<IEnumerable<T>>> GetAsync(PaginationDTO pagination) => await _repository.GetAsync(pagination);
+
+    public virtual async Task<ActionsResponse<int>> GetTotalRecordsAsync() => await _repository.GetTotalRecordsAsync();
 
     public virtual async Task<ActionsResponse<T>> UpdateAsync(T model) => await _repository.UpdateAsync(model);
 }

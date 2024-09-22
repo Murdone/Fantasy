@@ -1,4 +1,5 @@
-﻿using Fantasy.shared.Responses;
+﻿using Fantasy.shared.DTOs;
+using Fantasy.shared.Responses;
 
 namespace Fantasy.Backend.UnitsOfWork.interfaces;
 
@@ -13,4 +14,8 @@ public interface IGenericUnitOfWork<T> where T : class
     Task<ActionsResponse<T>> DeleteAsync(int id);
 
     Task<ActionsResponse<T>> GetAsync(int id);
+
+    Task<ActionsResponse<IEnumerable<T>>> GetAsync(PaginationDTO pagination);
+
+    Task<ActionsResponse<int>> GetTotalRecordsAsync();
 }

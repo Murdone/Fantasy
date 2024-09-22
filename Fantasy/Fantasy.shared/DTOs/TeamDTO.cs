@@ -1,5 +1,4 @@
-﻿using Fantasy.shared.Entities;
-using Fantasy.shared.Resources;
+﻿using Fantasy.shared.Resources;
 using System.ComponentModel.DataAnnotations;
 
 namespace Fantasy.Frontend.DTOs

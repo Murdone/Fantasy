@@ -1,5 +1,7 @@
 ﻿using Fantasy.Backend.Data;
+using Fantasy.Backend.Helpers;
 using Fantasy.Backend.Repositories.Interfaces;
+using Fantasy.shared.DTOs;
 using Fantasy.shared.Responses;
 using Microsoft.EntityFrameworkCore;
 
@@ -132,6 +134,30 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
         {
             WasSuccess = false,
             Message = "ERR003"
+        };
+    }
+
+    public virtual async Task<ActionsResponse<IEnumerable<T>>> GetAsync(PaginationDTO pagination)
+    {
+        var queryable = _entity.AsQueryable();
+
+        return new ActionsResponse<IEnumerable<T>>
+        {
+            WasSuccess = true,
+            Result = await queryable
+                .Paginate(pagination)
+                .ToListAsync()
+        };
+    }
+
+    public virtual async Task<ActionsResponse<int>> GetTotalRecordsAsync()
+    {
+        var queryable = _entity.AsQueryable();
+        double count = await queryable.CountAsync();
+        return new ActionsResponse<int>
+        {
+            WasSuccess = true,
+            Result = (int)count
         };
     }
 }
