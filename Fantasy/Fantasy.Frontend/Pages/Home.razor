@@ -2,6 +2,19 @@
 
 <PageTitle>Home</PageTitle>
 
+
+<CascadingAuthenticationState>
+    <AuthorizeView Roles="Admin">
+        <Authorized>
+            <p>Estás autenticado y autorizado, @context.User.Identity?.Name</p>
+            <p>Rol: @(context.User.IsInRole("Admin") ? "Admin" : "No Admin")</p>
+        </Authorized>
+        <NotAuthorized>
+            <p>No estás autorizado</p>
+        </NotAuthorized>
+    </AuthorizeView>
+</CascadingAuthenticationState>
+
+
 <h1>@Localizer["Title"]</h1>
 <h2>@Localizer["Subtitle"]</h2>
-

@@ -2,11 +2,14 @@
 using Fantasy.Frontend.DTOs;
 using Fantasy.shared.DTOs;
 using Fantasy.shared.Entities;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Fantasy.Backend.Controllers;
 
 [ApiController]
+[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
 [Route("api/[controller]")]
 public class TeamsController : GenericController<Team>
 {

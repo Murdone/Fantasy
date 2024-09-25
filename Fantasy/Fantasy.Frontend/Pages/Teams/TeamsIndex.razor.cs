@@ -3,6 +3,7 @@ using Fantasy.Frontend.Repositories;
 using Fantasy.Frontend.Shared;
 using Fantasy.shared.Entities;
 using Fantasy.shared.Resources;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using MudBlazor;
@@ -10,6 +11,7 @@ using System.Net;
 
 namespace Fantasy.Frontend.Pages.Teams;
 
+[Authorize(Roles = "Admin")]
 public partial class TeamsIndex
 {
     private List<Team>? Teams { get; set; }

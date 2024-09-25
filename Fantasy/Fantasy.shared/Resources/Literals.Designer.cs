@@ -97,6 +97,15 @@ namespace Fantasy.shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Authorizing....
+        /// </summary>
+        public static string Authorizing {
+            get {
+                return ResourceManager.GetString("Authorizing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         public static string Cancel {
@@ -178,7 +187,25 @@ namespace Fantasy.shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Record not found.
+        ///   Looks up a localized string similar to Edit User Profile.
+        /// </summary>
+        public static string EditUserProfile {
+            get {
+                return ResourceManager.GetString("EditUserProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        public static string Email {
+            get {
+                return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Record not found..
         /// </summary>
         public static string ERR001 {
             get {
@@ -223,6 +250,15 @@ namespace Fantasy.shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Incorrect email or password..
+        /// </summary>
+        public static string ERR006 {
+            get {
+                return ResourceManager.GetString("ERR006", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
         public static string Error {
@@ -241,11 +277,20 @@ namespace Fantasy.shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to First Name.
+        ///   Looks up a localized string similar to Firstname.
         /// </summary>
         public static string FirstName {
             get {
                 return ResourceManager.GetString("FirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hello.
+        /// </summary>
+        public static string Hello {
+            get {
+                return ResourceManager.GetString("Hello", resourceCulture);
             }
         }
         
@@ -268,7 +313,7 @@ namespace Fantasy.shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Last Name.
+        ///   Looks up a localized string similar to Lastname.
         /// </summary>
         public static string LastName {
             get {
@@ -286,11 +331,56 @@ namespace Fantasy.shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to the field {0} cannot be longer than {1} characters.
+        ///   Looks up a localized string similar to Field {0} must be between {2} and {1} characters..
+        /// </summary>
+        public static string LengthField {
+            get {
+                return ResourceManager.GetString("LengthField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Logout.
+        /// </summary>
+        public static string Logout {
+            get {
+                return ResourceManager.GetString("Logout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to log out?.
+        /// </summary>
+        public static string LogoutConfirm {
+            get {
+                return ResourceManager.GetString("LogoutConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you log out, you will need to log back in to access your account..
+        /// </summary>
+        public static string LogoutMessage {
+            get {
+                return ResourceManager.GetString("LogoutMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field {0} cannot be longer than {1} characters..
         /// </summary>
         public static string MaxLength {
             get {
                 return ResourceManager.GetString("MaxLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The {0} field must have at least {1} characters..
+        /// </summary>
+        public static string MinLength {
+            get {
+                return ResourceManager.GetString("MinLength", resourceCulture);
             }
         }
         
@@ -322,7 +412,70 @@ namespace Fantasy.shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please wait...
+        ///   Looks up a localized string similar to You are not authorized to view this content....
+        /// </summary>
+        public static string NotAuthorized {
+            get {
+                return ResourceManager.GetString("NotAuthorized", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not Found.
+        /// </summary>
+        public static string NotFound {
+            get {
+                return ResourceManager.GetString("NotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sorry, there is nothing on this route..
+        /// </summary>
+        public static string NothingInRoute {
+            get {
+                return ResourceManager.GetString("NothingInRoute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not a user yet? Register here.
+        /// </summary>
+        public static string NotUserYet {
+            get {
+                return ResourceManager.GetString("NotUserYet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        public static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The password and confirmation are not the same..
+        /// </summary>
+        public static string PasswordAndConfirmationDifferent {
+            get {
+                return ResourceManager.GetString("PasswordAndConfirmationDifferent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password Confirm.
+        /// </summary>
+        public static string PasswordConfirm {
+            get {
+                return ResourceManager.GetString("PasswordConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please wait....
         /// </summary>
         public static string PleaseWait {
             get {
@@ -331,7 +484,7 @@ namespace Fantasy.shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Record created ok.
+        ///   Looks up a localized string similar to Record created successfully..
         /// </summary>
         public static string RecordCreatedOk {
             get {
@@ -340,20 +493,38 @@ namespace Fantasy.shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to RecordsNumber.
+        ///   Looks up a localized string similar to Record deleted successfully..
         /// </summary>
-        public static string RecordNumber {
+        public static string RecordDeletedOk {
             get {
-                return ResourceManager.GetString("RecordNumber", resourceCulture);
+                return ResourceManager.GetString("RecordDeletedOk", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Record saved successfully..
         /// </summary>
-        public static string RecordSaveOk {
+        public static string RecordSavedOk {
             get {
-                return ResourceManager.GetString("RecordSaveOk", resourceCulture);
+                return ResourceManager.GetString("RecordSavedOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RecordsNumber.
+        /// </summary>
+        public static string RecordsNumber {
+            get {
+                return ResourceManager.GetString("RecordsNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register as new user.
+        /// </summary>
+        public static string Register {
+            get {
+                return ResourceManager.GetString("Register", resourceCulture);
             }
         }
         
@@ -369,9 +540,9 @@ namespace Fantasy.shared.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Return.
         /// </summary>
-        public static string Returnn {
+        public static string Return {
             get {
-                return ResourceManager.GetString("Returnn", resourceCulture);
+                return ResourceManager.GetString("Return", resourceCulture);
             }
         }
         
@@ -385,7 +556,7 @@ namespace Fantasy.shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Search….
+        ///   Looks up a localized string similar to Search....
         /// </summary>
         public static string Search {
             get {
@@ -394,7 +565,7 @@ namespace Fantasy.shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -- Select a Country ---.
+        ///   Looks up a localized string similar to -- Select a Country --.
         /// </summary>
         public static string SelectACountry {
             get {
@@ -403,7 +574,7 @@ namespace Fantasy.shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select a File… .
+        ///   Looks up a localized string similar to Select a file....
         /// </summary>
         public static string SelectFile {
             get {
@@ -457,11 +628,20 @@ namespace Fantasy.shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to User Type.
+        ///   Looks up a localized string similar to User type.
         /// </summary>
         public static string UserType {
             get {
                 return ResourceManager.GetString("UserType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You must enter a valid email..
+        /// </summary>
+        public static string ValidEmail {
+            get {
+                return ResourceManager.GetString("ValidEmail", resourceCulture);
             }
         }
         
