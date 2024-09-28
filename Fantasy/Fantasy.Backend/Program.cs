@@ -79,7 +79,7 @@ builder.Services.AddIdentity<User, IdentityRole>(x =>
     .AddEntityFrameworkStores<DataContext>()
     .AddDefaultTokenProviders();
 
-// Añade la autenticación al servicio usando el esquema de autenticación JWT (Bearer Token)
+// Aï¿½ade la autenticaciï¿½n al servicio usando el esquema de autenticaciï¿½n JWT (Bearer Token)
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
     // Configura las opciones de JWT Bearer Token
@@ -88,39 +88,39 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         // Indica si se debe validar el emisor (Issuer) del token. En este caso, no se valida.
         ValidateIssuer = false,
 
-        // Indica si se debe validar la audiencia (Audience) del token. Aquí también no se valida.
+        // Indica si se debe validar la audiencia (Audience) del token. Aquï¿½ tambiï¿½n no se valida.
         ValidateAudience = false,
 
-        // Indica si se debe validar la fecha de expiración del token. En este caso, se valida.
+        // Indica si se debe validar la fecha de expiraciï¿½n del token. En este caso, se valida.
         ValidateLifetime = true,
 
-        // Indica si se debe validar la clave secreta que firma el token. En este caso, sí se valida.
+        // Indica si se debe validar la clave secreta que firma el token. En este caso, sï¿½ se valida.
         ValidateIssuerSigningKey = true,
 
-        // Proporciona la clave secreta que se usará para validar la firma del token.
-        // Aquí se convierte la clave "jwtKey" almacenada en el archivo de configuración en una clave de seguridad.
+        // Proporciona la clave secreta que se usarï¿½ para validar la firma del token.
+        // Aquï¿½ se convierte la clave "jwtKey" almacenada en el archivo de configuraciï¿½n en una clave de seguridad.
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["jwtKey"]!)),
 
-        // Configura el tiempo de tolerancia para la validación del tiempo de vida del token. Se establece en cero.
-        // Esto significa que no hay margen de tolerancia para la expiración del token.
+        // Configura el tiempo de tolerancia para la validaciï¿½n del tiempo de vida del token. Se establece en cero.
+        // Esto significa que no hay margen de tolerancia para la expiraciï¿½n del token.
         ClockSkew = TimeSpan.Zero
     });
 
 var app = builder.Build();
 SeedData(app);  //inyeccion a mano del seeddb
 
-void SeedData(WebApplication app) // Definición del método SeedData
+void SeedData(WebApplication app) // Definiciï¿½n del mï¿½todo SeedData
 {
-    // Obtiene la fábrica de ámbitos de servicio de la aplicación
+    // Obtiene la fï¿½brica de ï¿½mbitos de servicio de la aplicaciï¿½n
     var scopedFactory = app.Services.GetService<IServiceScopeFactory>();
 
-    // Crea un nuevo ámbito utilizando la fábrica
+    // Crea un nuevo ï¿½mbito utilizando la fï¿½brica
     using var scope = scopedFactory!.CreateScope();
 
-    // Obtiene el servicio SeedDb del proveedor de servicios del ámbito creado
+    // Obtiene el servicio SeedDb del proveedor de servicios del ï¿½mbito creado
     var service = scope.ServiceProvider.GetService<SeedDb>();
 
-    // Llama al método asíncrono SeedAsync() y espera a que termine
+    // Llama al mï¿½todo asï¿½ncrono SeedAsync() y espera a que termine
     service!.SeedAsync().Wait();
 }
 
