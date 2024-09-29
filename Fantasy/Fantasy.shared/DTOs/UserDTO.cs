@@ -29,6 +29,7 @@ public class UserDTO
 
     public string FirstName { get; set; } = null!;
     public string LastName { get; set; } = null!;
+    public int CountryId { get; set; }
 
     // Método para convertir UserDTO a User
     public User ToUser()
@@ -38,7 +39,10 @@ public class UserDTO
             Email = this.Email,
             FirstName = this.FirstName,
             LastName = this.LastName,
+            CountryId = this.CountryId
             // Mapea cualquier otra propiedad que necesites
         };
     }
+
+    public string Language { get; set; } = null!;
 }

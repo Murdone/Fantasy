@@ -79,6 +79,9 @@ namespace Fantasy.Backend.Data
 
                 // Asigna el rol al nuevo usuario (Admin o User).
                 await _usersUnitOfWork.AddUserToRoleAsync(user, userType.ToString());
+
+                var token = await _usersUnitOfWork.GenerateEmailConfirmationTokenAsync(user);
+                await _usersUnitOfWork.ConfirmEmailAsync(user, token);
             }
 
             // Devuelve el usuario (ya sea el existente o el recién creado).

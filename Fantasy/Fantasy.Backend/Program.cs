@@ -69,12 +69,17 @@ builder.Services.AddScoped<IUsersUnitOfWork, UsersUnitOfWork>();
 
 builder.Services.AddIdentity<User, IdentityRole>(x =>
 {
+    x.Tokens.AuthenticatorTokenProvider = TokenOptions.DefaultAuthenticatorProvider;
+    x.SignIn.RequireConfirmedEmail = true;
     x.User.RequireUniqueEmail = true;
     x.Password.RequireDigit = false;
     x.Password.RequiredUniqueChars = 0;
     x.Password.RequireLowercase = false;
     x.Password.RequireNonAlphanumeric = false;
     x.Password.RequireUppercase = false;
+    x.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    x.Lockout.MaxFailedAccessAttempts = 3;
+    x.Lockout.AllowedForNewUsers = true;
 })
     .AddEntityFrameworkStores<DataContext>()
     .AddDefaultTokenProviders();
@@ -105,6 +110,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         // Esto significa que no hay margen de tolerancia para la expiraci�n del token.
         ClockSkew = TimeSpan.Zero
     });
+builder.Services.AddScoped<IMailHelper, MailHelper>();
 
 var app = builder.Build();
 SeedData(app);  //inyeccion a mano del seeddb

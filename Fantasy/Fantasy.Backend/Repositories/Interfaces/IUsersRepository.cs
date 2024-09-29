@@ -7,6 +7,12 @@ namespace Fantasy.Backend.Repositories.Interfaces
     // Define las operaciones que se deben implementar en el repositorio de usuarios.
     public interface IUsersRepository
     {
+        Task<User> GetUserAsync(Guid userId);
+
+        Task<string> GenerateEmailConfirmationTokenAsync(User user);
+
+        Task<IdentityResult> ConfirmEmailAsync(User user, string token);
+
         // Inicia sesión con las credenciales del usuario.
         Task<SignInResult> LoginAsync(LoginDTO model);
 

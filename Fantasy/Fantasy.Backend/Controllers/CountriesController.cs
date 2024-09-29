@@ -21,6 +21,7 @@ public class CountriesController : GenericController<Country>
         _countriesUnitOfWork = countriesUnitOfWork;
     }
 
+    [AllowAnonymous]
     [HttpGet("combo")] //aca soibre escribimos
     public async Task<IActionResult> GetComboAsync()
     {

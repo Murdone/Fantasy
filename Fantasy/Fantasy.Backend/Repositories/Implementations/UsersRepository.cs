@@ -49,12 +49,30 @@ public class UsersRepository : IUsersRepository
         }
     }
 
+    public async Task<IdentityResult> ConfirmEmailAsync(User user, string token)
+    {
+        return await _userManager.ConfirmEmailAsync(user, token);
+    }
+
+    public async Task<string> GenerateEmailConfirmationTokenAsync(User user)
+    {
+        return await _userManager.GenerateEmailConfirmationTokenAsync(user);
+    }
+
     // Obtiene un usuario a partir de su correo electrónico.
     public async Task<User> GetUserAsync(string email)
     {
         var user = await _context.Users
             .Include(u => u.Country) // Incluye el país relacionado.
             .FirstOrDefaultAsync(x => x.Email == email); // Busca el usuario por email.
+        return user!;
+    }
+
+    public async Task<User> GetUserAsync(Guid userId)
+    {
+        var user = await _context.Users
+            .Include(u => u.Country)
+            .FirstOrDefaultAsync(x => x.Id == userId.ToString());
         return user!;
     }
 
